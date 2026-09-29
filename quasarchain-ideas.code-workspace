@@ -1,0 +1,18 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/.git": true,
+      "**/.DS_Store": true
+    },
+    "search.exclude": {
+      "**/.git": true
+    },
+    "markdown.validate.enabled": true,
+    "python.defaultInterpreterPath": "C:\\Users\\enriq\\AppData\\Local\\Programs\\Python\\Python312\\python.exe"
+  }
+}

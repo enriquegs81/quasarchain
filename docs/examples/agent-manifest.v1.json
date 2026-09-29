@@ -1,0 +1,49 @@
+{
+  "schema": "quasarchain.agent-manifest/v1",
+  "agent_id": "did:quasar:agent:support-triage-001",
+  "operator_id": "did:quasar:org:pilot-001",
+  "name": "Support Triage Agent",
+  "naming": {
+    "domain": "support-triage.quasarchain.crypto",
+    "namespace": "quasarchain.crypto",
+    "verification_uri": "http://127.0.0.1:8765/verify/support-triage"
+  },
+  "version": "1.0.0",
+  "environment": "sandbox",
+  "capabilities": [
+    "classify_support_request",
+    "read_customer_record",
+    "create_support_ticket"
+  ],
+  "tools": [
+    {
+      "name": "support_api",
+      "operations": [
+        {
+          "name": "customer.read",
+          "permission": "support.customer.read",
+          "decision": "allow"
+        },
+        {
+          "name": "ticket.create",
+          "permission": "support.ticket.create",
+          "decision": "allow"
+        },
+        {
+          "name": "customer.export",
+          "permission": "support.customer.export",
+          "decision": "review"
+        }
+      ]
+    }
+  ],
+  "issued_at": "2026-09-29T00:00:00Z",
+  "expires_at": "2026-10-29T00:00:00Z",
+  "revocation_endpoint": "https://pilot.invalid/revocations/support-triage-001",
+  "signing": {
+    "algorithm": "EdDSA",
+    "key_id": "did:quasar:org:pilot-001#key-1",
+    "public_key": "REPLACE_WITH_BASE64URL_PUBLIC_KEY",
+    "signature": "REPLACE_WITH_BASE64URL_SIGNATURE"
+  }
+}

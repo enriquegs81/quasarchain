@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quasarchain-verifier"
+version = "0.1.0"
+description = "Local verifier for QuasarChain agent manifests"
+requires-python = ">=3.12"
+dependencies = ["cryptography>=42,<47"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

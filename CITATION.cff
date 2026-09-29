@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+title: "QuasarChain Quantum Experiment Passport"
+message: "If you use this software or the Bell-state laboratory in academic work, please cite this repository."
+type: software
+version: "0.1.0"
+date-released: 2026-09-30
+authors:
+  - name: "QuasarChain contributors"
+abstract: >-
+  Educational prototype for recording the provenance and integrity of a
+  reproducible Bell-state experiment using canonical circuit hashing and
+  Ed25519 signatures. The prototype does not claim experimental quantum
+  physics results or hardware equivalence.
+keywords:
+  - quantum computing
+  - reproducibility
+  - data provenance
+  - experimental integrity
+  - Ed25519
+  - Bell state
