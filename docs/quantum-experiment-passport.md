@@ -101,6 +101,23 @@ python -m pytest tests/test_quantum_lab.py -q
 - A signature authenticates a record produced by a key; it does not make a
   scientific claim true.
 
+## Blockchain Decision
+
+The Bell experiment does not require an on-chain transaction for its first
+validation. The local hash and Ed25519 signature already test whether the
+passport was altered and whether it was produced by the expected signing key.
+Adding a blockchain at this stage would add an external dependency without
+improving the quantum measurement or the simulator model.
+
+Blockchain remains a separate optional extension for anchoring a digest. If
+implemented, it should publish only a passport or circuit hash, experiment
+identifier, protocol version, and anchoring timestamp. It should not publish
+private keys, raw user data, prompts, or sensitive experiment results.
+
+An on-chain anchor could show that a digest was recorded by a network at a
+particular time. It could not prove that the circuit was physically executed,
+that the simulator was correct, or that the scientific interpretation was true.
+
 ## Reproducibility and Threats to Validity
 
 The current receipt is reproducible for the simulator and sampling algorithm
