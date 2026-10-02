@@ -33,12 +33,14 @@ the proposal to the gateway evidence hash.
 
 ## Evidence
 
-- Full test suite: `24 passed`.
+- Full test suite: `37 passed`.
 - Ideal standard-library simulator: `00: 546`, `11: 478`.
 - Ideal Qiskit simulator: `00: 517`, `11: 507`.
 - Qiskit Aer readout-noise simulation: `00: 456`, `01: 53`, `10: 50`, `11: 465`.
 - Signed tampering test: `verified` becomes `invalid_signature` after a count is changed.
 - Cross-framework criterion: same shot count and nonzero support.
+- IBM hardware snapshots from `ibm_fez`, `ibm_kingston`, and `ibm_marrakesh`.
+- Hardware job identifiers, calibration metadata, raw counts, and mitigated estimates in [hardware-bell-snapshots-2026-10-02.json](examples/hardware-bell-snapshots-2026-10-02.json).
 
 ## Scope and limitations
 
@@ -48,6 +50,10 @@ The noise experiment is a model-based simulation, not a measurement from a
 quantum processing unit. The cryptographic signature establishes integrity and
 key-based authorship of the record; it does not establish the truth of a
 scientific claim.
+
+The hardware data are time-stamped observations from three IBM Quantum
+backends, not a benchmark or a claim of device superiority. API credentials are
+not included.
 
 ## Reproduction
 

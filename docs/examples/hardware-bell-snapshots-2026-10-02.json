@@ -1,0 +1,105 @@
+{
+  "schema": "quasarchain.quantum-hardware-snapshot/v1",
+  "recorded_at": "2026-10-02",
+  "software": {
+    "qiskit": "2.5.2",
+    "qiskit_ibm_runtime": "0.50.0",
+    "sampler": "qiskit_ibm_runtime.executor_sampler.Sampler",
+    "optimization_level": 1
+  },
+  "protocol": {
+    "circuit": "|00> -> H(0) -> CZ-equivalent transpiled Bell circuit",
+    "measurement_bases": ["Z", "X"],
+    "shots": 1024,
+    "calibration_states": ["00", "01", "10", "11"],
+    "calibration_shots_per_state": 1024
+  },
+  "backends": [
+    {
+      "name": "ibm_fez",
+      "num_qubits": 156,
+      "physical_qubits": [7, 17],
+      "calibration_timestamp": "2026-10-02T00:41:19+02:00",
+      "native_two_qubit_gate": {
+        "name": "cz",
+        "qubits": [7, 17],
+        "gate_error": 0.002782024161569252,
+        "gate_length_ns": 68
+      },
+      "qubit_properties": {
+        "7": {"t1_seconds": 0.00012904495209536455, "t2_seconds": 0.00004094941235947429, "readout_error": 0.013427734375},
+        "17": {"t1_seconds": 0.00020008735580200784, "t2_seconds": 0.00011431336430346209, "readout_error": 0.004150390625}
+      },
+      "jobs": {
+        "readout_calibration": {
+          "job_id": "daveep5j371s73dmokt0",
+          "shots_per_state": 256,
+          "counts": {
+            "00": {"00": 249, "01": 6, "10": 1, "11": 0},
+            "01": {"00": 9, "01": 246, "10": 0, "11": 1},
+            "10": {"00": 4, "01": 0, "10": 250, "11": 2},
+            "11": {"00": 0, "01": 4, "10": 6, "11": 246}
+          }
+        },
+        "bell": {
+          "job_id": "davef3s92g1c7398olj0",
+          "counts": {
+            "Z": {"00": 537, "01": 22, "10": 15, "11": 450},
+            "X": {"00": 504, "01": 19, "10": 22, "11": 479}
+          },
+          "raw_correlations": {"ZZ": 0.927734375, "XX": 0.919921875},
+          "mitigated_correlations": {"ZZ": 0.9927142988943195, "XX": 0.9853000389996813}
+        },
+        "replication": {
+          "job_id": "daveg8ql7guc73ceoikg",
+          "replicas_per_basis": 5,
+          "raw_mean_correlations": {"ZZ": 0.935546875, "XX": 0.922265625},
+          "raw_sample_standard_deviation": {"ZZ": 0.00662336912414577, "XX": 0.012150258605465461},
+          "mitigated_mean_correlations": {"ZZ": 0.9910611429778254, "XX": 0.9774330072424136}
+        }
+      }
+    },
+    {
+      "name": "ibm_kingston",
+      "num_qubits": 156,
+      "physical_qubits": [72, 73],
+      "calibration_timestamp": "2026-10-02T00:41:44+02:00",
+      "native_two_qubit_gate": {"name": "cz", "qubits": [72, 73], "gate_error": 0.0023437427672429734, "gate_length_ns": 68},
+      "qubit_properties": {
+        "72": {"t1_seconds": 0.00025744851690551955, "t2_seconds": 0.0001166584565394671, "readout_error": 0.0477294921875},
+        "73": {"t1_seconds": 0.00019385531987109984, "t2_seconds": 0.00015452980861148139, "readout_error": 0.017578125}
+      },
+      "jobs": {
+        "bell_and_calibration": {
+          "job_id": "davei0c92g1c7398oovg",
+          "raw_correlations": {"ZZ": 0.853515625, "XX": 0.865234375},
+          "mitigated_correlations": {"ZZ": 0.978227270623039, "XX": 0.9862212533097006}
+        }
+      }
+    },
+    {
+      "name": "ibm_marrakesh",
+      "num_qubits": 156,
+      "physical_qubits": [72, 73],
+      "calibration_timestamp": "2026-10-01T23:57:09+02:00",
+      "native_two_qubit_gate": {"name": "cz", "qubits": [72, 73], "gate_error": 0.0025546185358333307, "gate_length_ns": 68},
+      "qubit_properties": {
+        "72": {"t1_seconds": 0.00010821104899919744, "t2_seconds": 0.00001696071388712891, "readout_error": 0.0166015625},
+        "73": {"t1_seconds": 0.00010743190055429193, "t2_seconds": 0.00003512835614586503, "readout_error": 0.0198974609375}
+      },
+      "jobs": {
+        "bell_and_calibration": {
+          "job_id": "daveiq04oijs73e7dmhg",
+          "raw_correlations": {"ZZ": 0.931640625, "XX": 0.904296875},
+          "mitigated_correlations": {"ZZ": 0.9592650523181415, "XX": 0.9331011001354921}
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "These are time-stamped snapshots, not permanent backend properties.",
+    "The records do not demonstrate a Bell-inequality violation or nonlocality.",
+    "Mitigated values are estimates; raw counts remain the primary observations.",
+    "No API keys or private credentials are included."
+  ]
+}

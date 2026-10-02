@@ -47,6 +47,7 @@ Abre `quasarchain-ideas.code-workspace` en VS Code.
 ## Estructura
 
 - `.github/prompts/`: prompt reutilizable para explorar soluciones.
+- `.github/prompts/quantum-scientific-innovation.prompt.md`: prompt para diseñar y criticar experimentos cuánticos falsables.
 - `docs/hypotheses.md`: registro de hipotesis y experimentos.
 - `docs/decision-matrix.md`: criterios de priorizacion.
 - `docs/ideas-quasarchain-crypto.md`: mapa inicial de oportunidades y recomendacion.
@@ -66,6 +67,7 @@ Abre `quasarchain-ideas.code-workspace` en VS Code.
 - `CITATION.cff`: metadatos de citación del prototipo.
 - `docs/examples/agent-manifest.v1.json`: manifiesto de referencia para el escenario inicial.
 - `docs/examples/demo-evidence.json`: diez eventos generados por el demo de `support_api`.
+- `docs/examples/hardware-bell-snapshots-2026-10-02.json`: datos públicos de calibración y Bell en tres backends IBM.
 - `docs/research-notes.md`: notas de investigacion y fuentes por verificar.
 - `web/console.html`: consola local para consultar decisiones y evidencia.
 
